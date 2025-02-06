@@ -45,80 +45,225 @@ table {
     border-spacing: 0;
 }
  
+
  
 body{
-    background-image: url(imagens/pexels-jeshoots-com-147458-442576.jpg);
-    /* imagem de fundo */
+    background-image: url(imagens/pexels-jeshoots-com-147458-442576.jpg); 
+    /* Define a imagem de fundo da página, usando o arquivo especificado no caminho. */
+    
     background-size: cover;
-    /* Cobrir tudo */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
+    /* Faz com que a imagem de fundo cubra toda a tela, sem distorção, podendo cortar a imagem para preencher todo o espaço. */
+    
+    background-repeat: no-repeat;
+    /* Impede que a imagem de fundo se repita. Ela vai aparecer uma vez apenas, ocupando toda a área da tela. */
+    
+    background-position: center;
+    /* Define que a imagem de fundo ficará centralizada na tela. */
 }
-
 .conteudo{
-    background-color: rgba(94, 94, 94, 0.5);
+    background-color: rgba(94, 94, 94, 0.5); 
+    /* Define a cor de fundo do elemento com opacidade. A cor tem 50% de transparência (0.5). */
+
     height: 100vh;
+    /* Define a altura da seção como 100% da altura da tela (viewport height). */
+
     text-align: center;
+    /* Alinha o texto horizontalmente ao centro. */
+    
     display: flex;
+    /* Utiliza o Flexbox para layout, facilitando o alinhamento dos itens dentro da seção. */
+    
     align-items: center;
+    /* Alinha os itens verticalmente no centro (no eixo Y). */
+    
     justify-content: center;
+    /* Alinha os itens horizontalmente no centro (no eixo X). */
+    
     flex-direction: column;
+    /* Organiza os itens filhos da `.conteudo` em uma coluna (em vez de linha). */
 }
-
-
 .titulo{
     font-size: 35px;
+    /* Define o tamanho da fonte como 35px. */
+    
     padding-bottom: 3px;
+    /* Adiciona um espaço de 3px abaixo do título. */
+    
     letter-spacing: 5px;
+    /* Aumenta o espaçamento entre as letras, deixando elas mais separadas. */
+    
     font-family: "poppins";
+    /* Define a fonte como "Poppins". */
+    
     font-weight: 700;
+    /* Define o peso da fonte (negrito), com 700 de intensidade. */
 }
-
 .subtitulo{
     font-size: 30px;
+    /* Define o tamanho da fonte como 30px. */
+    
     font-family: "poppins";
+    /* Usa a mesma fonte "Poppins" do título. */
+    
     font-weight: 200;
+    /* Define o peso da fonte como mais leve (200). */
 }
-
 .linha{
-    border: 1px solid rgb(54, 72, 230);
+    border: 1px solid rgb(255, 17, 17);
+    /* Cria uma borda sólida de 1px de espessura, com a cor vermelha (rgb(255, 17, 17)). */
+    
     width: 400px;
-
+    /* Define a largura da linha para 400px. */
 }
-
 .texto{
     font-size: 18px;
+    /* Define o tamanho da fonte como 18px. */
+    
     line-height: 22px;
+    /* Define o espaçamento entre as linhas de texto como 22px, melhorando a legibilidade. */
+    
     font-family: "Nunito";
+    /* Define a fonte como "Nunito". */
+    
     font-weight: 400;
+    /* Define o peso da fonte como normal (400). */
+    
     width: 400px;
+    /* Define a largura do elemento como 400px. */
+    
     text-align: justify;
+    /* Justifica o texto, alinhando as linhas de texto com as margens esquerda e direita. */
 }
-
 .meu-video{
-    width: 300px;
+    width: 100vw;
+    /* Define a largura do vídeo como 100% da largura da janela de visualização (viewport width). */
+    
+    height: 100vh;
+    /* Define a altura do vídeo como 100% da altura da janela de visualização (viewport height). */
+    
+    object-fit: cover;
+    /* Faz o vídeo cobrir completamente a área disponível sem distorção. O vídeo pode ser cortado para manter a proporção. */
+    
+    position: absolute;
+    /* Posiciona o vídeo de forma absoluta, fora do fluxo normal do layout. */
+    
+    left: 0;
+    /* Posiciona o vídeo no lado esquerdo da tela. */
+    
+    top: 0;
+    /* Posiciona o vídeo no topo da tela. */
+    
+    z-index: -1;
+    /* Coloca o vídeo atrás de outros elementos com z-index maior (no caso, o conteúdo da página). */
 }
-
 .botao-comprar{
     margin-top: 20px;
+    /* Adiciona um espaço de 20px acima do botão. */
+    
     border: 3px double rgb(0, 0, 0);
+    /* Cria uma borda dupla de 3px de espessura e preta (rgb(0, 0, 0)). */
+    
     font-size: 22px;
+    /* Define o tamanho da fonte como 22px. */
+    
     text-decoration: none;
+    /* Remove qualquer decoração de texto, como sublinhado. */
+    
     padding: 15px;
+    /* Adiciona 15px de preenchimento dentro do botão. */
+    
     width: 200px;
+    /* Define a largura do botão como 200px. */
+    
     color: rgb(255, 255, 255);
+    /* Define a cor do texto do botão como branco. */
+    
     background-color: rgb(224, 35, 35);
+    /* Define a cor de fundo do botão como vermelha. */
+    
     font-family: "Nunito";
+    /* Usa a fonte "Nunito" para o texto no botão. */
+    
     letter-spacing: 3px;
+    /* Aumenta o espaçamento entre as letras. */
+    
     font-weight: 600;
+    /* Define o peso da fonte como semi-negrito (600). */
 }
-
+.botao-comprar:hover{
+    background-color: blueviolet;
+    /* Muda a cor de fundo para "blueviolet" quando o botão é hoverizado. */
+    
+    color: yellow;
+    /* Muda a cor do texto para amarelo durante o hover. */
+}
 .formulario{
     margin-top: 30px;
+    /* Adiciona um espaço de 30px acima do formulário. */
+    
     width: 500px;
+    /* Define a largura do formulário como 500px. */
+}
+.label{
+    font-family: "Nunito";
+    /* Define a fonte como "Nunito" para o rótulo. */
+    
+    font-weight: 400;
+    /* Define o peso da fonte como normal. */
+    
+    width: 100%;
+    /* Faz com que o rótulo ocupe 100% da largura do elemento pai. */
+    
+    display: block;
+    /* Exibe o rótulo como um bloco, fazendo com que ele ocupe toda a largura disponível. */
+    
+    text-align: left;
+    /* Alinha o texto do rótulo à esquerda. */
+}
+.campo{
+    margin-bottom: 10px;
+    /* Adiciona um espaço de 10px abaixo do campo. */
+    
+    width: 100%;
+    /* Faz o campo ocupar 100% da largura do elemento pai. */
+    
+    font-family: "Nunito";
+    /* Define a fonte como "Nunito" para o texto dentro do campo. */
+    
+    font-size: 18px;
+    /* Define o tamanho da fonte dentro do campo como 18px. */
+    
+    font-weight: 300;
+    /* Define o peso da fonte como leve (300). */
+    
+    padding: 10px;
+    /* Adiciona 10px de preenchimento dentro do campo. */
+    
+    box-sizing: border-box;
+    /* Inclui o preenchimento e a borda no cálculo do tamanho total do campo, garantindo que ele se ajuste corretamente no layout. */
+}
+.video{
+    position: absolute;
+    /* Posiciona o vídeo de forma absoluta. */
+    
+    left: 0;
+    /* Coloca o vídeo no lado esquerdo da tela. */
+    
+    top: 0;
+    /* Coloca o vídeo no topo da tela. */
+    
+    z-index: -1;
+    /* Coloca o vídeo atrás dos outros elementos da página. */
+    
+    height: 100%;
+    /* Faz o vídeo ocupar 100% da altura da tela. */
+    
+    width: 100%;
+    /* Faz o vídeo ocupar 100% da largura da tela. */
+    
+    object-fit: cover;
+    /* Faz o vídeo cobrir toda a área disponível sem distorção. O vídeo pode ser cortado, se necessário. */
 }
 
-.label{
-    font-family: "nunito";
-    
-}
+
+
